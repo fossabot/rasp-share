@@ -1,10 +1,12 @@
 FROM raspbian/jessie:latest
 
-RUN apt-get update -y
+RUN apt-get update -y \
+  && apt-get upgrade -y
+
 RUN apt-get install netatalk  --no-install-recommends -y
 RUN apt-get install avahi-daemon avahi-utils  --no-install-recommends -y
 
-RUN apt-get install net-tools vim -y
+#RUN apt-get install net-tools vim -y
 
 RUN apt-get -qq -y autoclean \
   && apt-get -qq -y autoremove \
