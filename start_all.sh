@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+
+echo "setting the $SHARE_USER password"
+echo "$SHARE_USER:$SHARE_PWD" | chpasswd
+
+echo "setting correct permissions"
+chown -R $SHARE_USER /shared
+
 echo ">> starting dbus"
 /etc/init.d/dbus start
 if [ $? -ne 0 ]; then
