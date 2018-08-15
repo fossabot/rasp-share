@@ -175,9 +175,9 @@
 
 # The line below sets some DEFAULT, starting with Netatalk 2.1.
 #:DEFAULT: options:upriv,usedots
-:DEFAULT: options:usedots
+:DEFAULT: options:usedots,upriv
 
 # By default all users have access to their home directories.
 #~/			"Home Directory"
-/shared/backup      "baskup" options:tm
+/shared/backup      "backup" options:tm,limitsize
 /shared/filmes      "filmes"

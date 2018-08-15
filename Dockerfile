@@ -19,6 +19,9 @@ ADD AppleVolumes.default /etc/netatalk/AppleVolumes.default
 ADD avahi-daemon.conf /etc/avahi/avahi-daemon.conf
 
 
+ENV SHARE_USER=share_user
+ENV SHARE_PWD=default
+
 
 #according to :https://wiki.archlinux.org/index.php/Netatalk
 
