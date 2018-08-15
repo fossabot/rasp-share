@@ -7,7 +7,7 @@ run with following command:
 
 ```
 export dir_share=/tmp/share
-export container_name=plex-share
+export container_name=rasp-share
 
 docker run -itd \
   --net host \
