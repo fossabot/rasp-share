@@ -23,5 +23,19 @@ docker run -itd \
   --name=$container_name \
   --restart unless-stopped \
   jrromb/plex-share
+  
+  
+  
+  
+  export dir_share=/tmp/share
+  export container_name=rasp-share
+  
+  docker run -itd \
+    --net host \
+    -v $dir_share:/shared \
+    --hostname=$container_name \
+    --name=$container_name \
+    --restart unless-stopped \
+    jrromb/plex-share
 
 ```
