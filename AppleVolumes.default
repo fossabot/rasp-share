@@ -179,5 +179,11 @@
 
 # By default all users have access to their home directories.
 #~/			"Home Directory"
-/shared/backup      "backup" options:tm,limitsize
+
+
+
+/shared/backup/monstro      "backup-monstro" options:tm,volsizelimit:250000
+/shared/backup/fabi         "backup-fabi" options:tm,volsizelimit:350000
+/shared/backup/ju           "backup-ju" options:tm,volsizelimit:350000
+
 /shared/filmes      "filmes"
