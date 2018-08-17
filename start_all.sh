@@ -1,11 +1,22 @@
 #!/usr/bin/env bash
 
+set -x
 
 echo "setting the $SHARE_USER password"
 echo "$SHARE_USER:$SHARE_PWD" | chpasswd
 
 echo "setting correct permissions"
 chown -R $SHARE_USER /shared
+
+
+
+echo "creating folder if does not exist"
+[ -d /shared/backup/monstro ]   || mkdir /shared/backup/monstro -p
+[ -d /shared/backup/fabi  ]     || mkdir /shared/backup/fabi  -p
+[ -d /shared/backup/ju  ]       || mkdir /shared/backup/ju  -p
+[ -d /shared/filmes  ]          || mkdir /shared/filmes  -p
+
+
 
 echo ">> starting dbus"
 /etc/init.d/dbus start
@@ -30,6 +41,9 @@ fi
 
 echo ">> all started"
 
+
+
+
 check_process(){
   ps aux | grep $1 |grep -q -v grep
   if [ $? -ne 0 ]; then
@@ -40,8 +54,7 @@ check_process(){
 
 
 
-# ensure the user can write
-chown share_user -R /shared
+
 
 
 # checking if all process still running, otherwise terminate (another will start because the restart conf)
@@ -66,3 +79,5 @@ done
 #troubleshoot ahavi at
 #avahi-daemon --debug
 
+
+set +x
