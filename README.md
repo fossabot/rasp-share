@@ -5,9 +5,12 @@
 
 run with following command:
 
+
+
+the default user and password is share_user:default
 ```
 export dir_share=/tmp/share
-export container_name=rasp-share
+export container_name=share
 
 docker run -itd \
   --net host \
@@ -22,20 +25,22 @@ docker run -itd \
   --hostname=$container_name \
   --name=$container_name \
   --restart unless-stopped \
-  jrromb/plex-share
+  jrromb/rasp-share
   
   
   
-  
-  export dir_share=/tmp/share
-  export container_name=rasp-share
+
   
   docker run -itd \
     --net host \
-    -v $dir_share:/shared \
-    --hostname=$container_name \
-    --name=$container_name \
-    --restart unless-stopped \
-    jrromb/plex-share
+    -v /tmp/share:/shared \
+    --hostname=share \
+    --name=share \
+    jrromb/rasp-share
+    
+    
+    
+    
+docker run -itd --net host -v /tmp/share:/shared  --hostname=share --name=share jrromb/rasp-share:latest
 
 ```
