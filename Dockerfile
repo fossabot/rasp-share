@@ -45,6 +45,8 @@ EXPOSE 206
 VOLUME ["shared"]
 RUN useradd share_user
 
+VOLUME ["/var/run/dbus"]
+
 #RUN /etc/init.d/dbus start
 #RUN /etc/init.d/netatalk restart
 #RUN /etc/init.d/avahi-daemon restart
