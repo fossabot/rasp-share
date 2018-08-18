@@ -41,7 +41,6 @@ EXPOSE 206
 
 
 
-
 VOLUME ["shared"]
 RUN useradd share_user
 
