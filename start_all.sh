@@ -5,9 +5,6 @@ set -x
 echo "setting the $SHARE_USER password"
 echo "$SHARE_USER:$SHARE_PWD" | chpasswd
 
-echo "setting correct permissions"
-chown -R $SHARE_USER /shared
-
 
 
 echo "creating folder if does not exist"
@@ -15,6 +12,11 @@ echo "creating folder if does not exist"
 [ -d /shared/backup/fabi  ]     || mkdir /shared/backup/fabi  -p
 [ -d /shared/backup/ju  ]       || mkdir /shared/backup/ju  -p
 [ -d /shared/filmes  ]          || mkdir /shared/filmes  -p
+[ -d /shared/data  ]            || mkdir /shared/data  -p
+
+
+echo "setting correct permissions"
+chown -R $SHARE_USER /shared
 
 
 

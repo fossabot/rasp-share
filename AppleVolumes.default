@@ -187,3 +187,4 @@
 /shared/backup/ju           "backup-ju" options:tm volsizelimit:350000
 
 /shared/filmes      "filmes"
+/shared/data        "shared"
