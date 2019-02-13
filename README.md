@@ -1,6 +1,7 @@
 # rasp-share
 
 [![Build Status](https://travis-ci.org/jrrombaldo/rasp-share.svg?branch=master)](https://travis-ci.org/jrrombaldo/rasp-share)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjrrombaldo%2Frasp-share.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjrrombaldo%2Frasp-share?ref=badge_shield)
 
 #Requirements
 
@@ -28,3 +29,7 @@ docker run -itd \
 --name=share \
 jrromb/rasp-share
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjrrombaldo%2Frasp-share.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjrrombaldo%2Frasp-share?ref=badge_large)
